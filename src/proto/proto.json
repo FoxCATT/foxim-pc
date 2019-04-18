@@ -1,0 +1,146 @@
+{
+  "nested": {
+    "proto": {
+      "nested": {
+        "connect": {
+          "fields": {
+            "username": {
+              "type": "bytes",
+              "id": 1
+            },
+            "password": {
+              "type": "bytes",
+              "id": 2
+            },
+            "clientID": {
+              "type": "bytes",
+              "id": 3
+            }
+          }
+        },
+        "reconnect": {
+          "fields": {
+            "recode": {
+              "type": "ReCode",
+              "id": 1
+            },
+            "cookie": {
+              "type": "bytes",
+              "id": 2
+            }
+          },
+          "nested": {
+            "ReCode": {
+              "values": {
+                "conSuccess": 0,
+                "conError": 1,
+                "conRefuse": 2,
+                "conIncorrect": 3
+              }
+            }
+          }
+        },
+        "message": {
+          "fields": {
+            "type": {
+              "type": "Type",
+              "id": 1
+            },
+            "userID": {
+              "type": "bytes",
+              "id": 2
+            },
+            "toID": {
+              "type": "bytes",
+              "id": 3
+            },
+            "time": {
+              "type": "google.protobuf.Timestamp",
+              "id": 4
+            },
+            "content": {
+              "type": "string",
+              "id": 5
+            },
+            "mType": {
+              "type": "MType",
+              "id": 6
+            }
+          },
+          "nested": {
+            "Type": {
+              "values": {
+                "message": 0,
+                "friend": 1,
+                "group": 2
+              }
+            },
+            "MType": {
+              "values": {
+                "add": 0,
+                "del": 1
+              }
+            }
+          }
+        },
+        "remessage": {
+          "fields": {
+            "recode": {
+              "type": "ReCode",
+              "id": 1
+            }
+          },
+          "nested": {
+            "ReCode": {
+              "values": {
+                "sendError": 0,
+                "sendSuccess": 1
+              }
+            }
+          }
+        },
+        "info": {
+          "fields": {
+            "type": {
+              "type": "Type",
+              "id": 1
+            },
+            "userID": {
+              "type": "bytes",
+              "id": 2
+            }
+          },
+          "nested": {
+            "Type": {
+              "values": {
+                "user": 0,
+                "frined": 1,
+                "group": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "google": {
+      "nested": {
+        "protobuf": {
+          "nested": {
+            "Timestamp": {
+              "fields": {
+                "seconds": {
+                  "type": "int64",
+                  "id": 1
+                },
+                "nanos": {
+                  "type": "int32",
+                  "id": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

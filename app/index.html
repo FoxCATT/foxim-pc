@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FoxIM</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/main.css">
+    <script>
+        window.$ = window.jQuery = require('_jquery@3.4.0@jquery/dist/jquery.min.js');
+        require('_bootstrap@4.3.1@bootstrap/dist/js/bootstrap.min.js');
+    </script>
+    <link rel="stylesheet" type="text/css" href="./static/css/main.css">
+</head>
+
+<body>
+<div class="container-fluid page">
+    <nav class="row header no_select" style="-webkit-app-region: drag">
+<!--        用户头像 搜索框-->
+        <div class="col-4">
+            <img src="static/images/dog.png" alt="" id="logo" style="-webkit-app-region: no-drag">
+            <input type="text" placeholder="" id="search_txt" style="-webkit-app-region: no-drag">
+            <button type="button" id="search_bt" style="-webkit-app-region: no-drag">
+                <img src="static/images/search.svg" alt="" class="icon icon-input">
+            </button>
+        </div>
+<!--        信息选择框-->
+        <div class="col-4" style="text-align: center">
+            <button type="button" id="con_bt">
+                <img src="static/images/conversation.svg" alt="" class="icon-menu">
+            </button>
+            <button type="button" id="users_bt">
+                <img src="static/images/users.svg" alt="" class="icon-menu">
+            </button>
+            <button type="button" id="other_bt">
+                <img src="static/images/other.svg" alt="" class="icon-menu">
+            </button>
+        </div>
+<!--        窗口选项-->
+        <div class="col-4" style="text-align: right">
+            <button type="button" id="set_bt" style="-webkit-app-region: no-drag">
+                <img src="static/images/setting.svg" alt="" class="icon">
+            </button>
+            <button type="button" id="min_bt" style="-webkit-app-region: no-drag">
+                <img src="static/images/min.svg" alt="" class="icon">
+            </button>
+            <button type="button" id="max_bt" style="-webkit-app-region: no-drag">
+                <img src="static/images/max.svg" alt="" class="icon">
+            </button>
+            <button type="button" id="close_bt" style="-webkit-app-region: no-drag">
+                <img src="static/images/close.svg" alt="" class="icon">
+            </button>
+        </div>
+    </nav>
+    <div class="row content">
+        <div class="col-3 sideList no_select">
+<!--            对话-->
+            <ul class="row" id="conversation" >
+                <li id="" onclick="conversation_click(this)">
+                    <img src="../tmp/image/u1.jpeg" alt="" class="icon-con">
+                    <div class="info">
+                        <h5>u2</h5>
+                        <p>message</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9 window">
+            <div class="row">
+                <div id="chat-header">
+                    <h3>用户</h3>
+                </div>
+                <ul class="chat">
+                    <li class="other">
+                        <img src="../tmp/image/u1.jpeg" alt="" class="icon-user">
+                        <div class="wordB">
+                            <p>test</p>
+                            <time>20:17</time>
+                        </div>
+                    </li>
+                    <li class="self">
+                        <img src="../tmp/image/u2.jpeg" alt="" class="icon-user">
+                        <div class="wordA">
+                            <p>hello world</p>
+                            <time>20:17</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row interaction">
+                <div class="tools no_select">
+                    <button type="button" id="font_bt">
+                        <img src="static/images/font.svg" alt="" class="icon-tools">
+                    </button>
+                    <button type="button" id="emoji_bt">
+                        <img src="static/images/emoji.svg" alt="" class="icon-tools">
+                    </button>
+                    <button type="button" id="voice_bt">
+                        <img src="static/images/voice.svg" alt="" class="icon-tools">
+                    </button>
+                    <button type="button" id="file_bt">
+                        <img src="static/images/file.svg" alt="" class="icon-tools">
+                    </button>
+                    <button type="button" id="picture_bt">
+                        <img src="static/images/picture.svg" alt="" class="icon-tools">
+                    </button>
+                    <button type="button" id="message_bt">
+                        <span>消息记录</span>
+                    </button>
+                </div>
+                <textarea id="talk_txt"></textarea>
+                <input type="button" value="发送" id="talk_bt">
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./static/js/main.js"></script>
+<!--<script>-->
+<!--    require('electron-connect').client.create();-->
+<!--</script>-->
+</html>

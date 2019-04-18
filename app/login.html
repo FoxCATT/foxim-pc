@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>FoxIM</title>
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/login.css">
+    <script>
+        window.$ = window.jQuery = require('_jquery@3.4.0@jquery/dist/jquery.min.js');
+        require('_bootstrap@4.3.1@bootstrap/dist/js/bootstrap.min.js');
+    </script>
+</head>
+
+<body>
+<div class="container-fluid page">
+    <nav class="row header" style="-webkit-app-region: drag">
+        <div class="container-fluid" style="text-align: right">
+            <button type="button" id="min_bt">
+                <img src="static/images/min.svg" alt="" class="icon">
+            </button>
+            <button type="button" id="close_bt">
+                <img src="static/images/close.svg" alt="" class="icon">
+            </button>
+        </div>
+    </nav>
+    <div class="row content">
+        <div class="col-3"></div>
+        <div class="col-6 window no_select" style="text-align: center">
+            <form action="">
+                <div style="position:relative;">
+                    <img src="static/images/user.svg" alt="" class="icon icon-input">
+                    <input type="text" placeholder="用户名" id="username" value="0">
+                </div>
+                <div style="position:relative;">
+
+                    <img src="static/images/pass.svg" alt="" class="icon icon-input">
+                    <input type="password" placeholder="密码" id="password" oncopy="return false" value="123456">
+                </div>
+                <div class="options">
+                    <input type="checkbox" id="re_pass" class="left"><label for="re_pass"
+                                                                            class="no_select left"><span></span>记住密码</label>
+                    <input type="checkbox" id="autoLogin"><label for="autoLogin" class="no_select right"><span></span>自动登录</label>
+                </div>
+            </form>
+            <div>
+                <button type="submit" class="buttonLogin">登录</button>
+            </div>
+        </div>
+        <div class="col-3" style="padding-left: 8px">
+            <a href="" class="link" style="margin-top: 12px">注册账号</a>
+            <a href="" class="link">找回密码</a>
+        </div>
+    </div>
+    <div class="">
+        <img class="logo" src="static/images/dog.png" alt=""/></div>
+</div>
+</body>
+<script src="static/js/login.js" type="text/javascript"></script>
+<!--<script>-->
+<!--    require('electron-connect').client.create();-->
+<!--</script>-->
+</html>

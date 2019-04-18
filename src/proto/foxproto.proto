@@ -1,0 +1,59 @@
+syntax = "proto3";
+package proto;
+
+import "google/protobuf/timestamp.proto";
+
+//建立链接
+message connect {
+    bytes username = 1;
+    bytes password = 2;
+    bytes clientID = 3;
+}
+//链接应答
+message reconnect {
+    enum ReCode {
+        conSuccess = 0;
+        conError = 1;
+        conRefuse = 2;
+        conIncorrect = 3;
+    }
+    ReCode recode = 1;
+    bytes cookie = 2;
+}
+
+//消息
+message message {
+    enum Type {
+        message = 0;
+        friend = 1;
+        group = 2;
+    }
+    enum MType {
+        add = 0;
+        del = 1;
+    }
+    Type type = 1;
+    bytes userID = 2;
+    bytes toID = 3;
+    google.protobuf.Timestamp time = 4;
+    string content = 5;
+    MType mType = 6;
+}
+//消息应答
+message remessage {
+    enum ReCode {
+        sendError = 0;
+        sendSuccess = 1;
+    }
+    ReCode recode = 1;
+}
+
+message info {
+    enum Type {
+        user = 0;
+        frined = 1;
+        group = 2;
+    }
+    Type type = 1;
+    bytes userID = 2;
+}

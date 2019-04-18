@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: transparent;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    font-size: 12px;
+    color: #1B9AF7;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #4cb0f9;
+    text-decoration: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.header {
+    height: 176px;
+    margin-bottom: 0;
+    border: none;
+    background-color: #1B9AF7;
+    border-radius: 6px 6px 0 0;
+}
+
+.content {
+    /*text-align: center;*/
+    background-color: #EBF2F9;
+    border-radius: 0 0 6px 6px;
+    /*height: 100%;*/
+}
+
+#close_bt, #min_bt {
+    padding: 1px 3px;
+    margin: 5px 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-app-region: no-drag
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+}
+
+.icon-input {
+    position: absolute;
+    top: 7px;
+    /* left: 102px; */
+}
+
+.window {
+    margin-top: 12px;
+}
+
+#username, #password {
+    padding-left: 20px;
+    font-size: 14px;
+    height: 32px;
+    width: 200px;
+}
+
+/*#username:focus, #password:focus {*/
+/*    outline: dodgerblue;*/
+/*}*/
+
+#username {
+    border-radius: 4px 4px 0 0;
+    border: 1px #D1D1D1 solid;
+}
+
+#password {
+    border-radius: 0 0 4px 4px;
+    border: 1px #D1D1D1 solid;
+    border-top: none;
+}
+
+.buttonLogin {
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    width: 200px;
+    margin-top: 8px;
+    margin-bottom: 17px;
+    color: #fff;
+    background-color: #1B9AF7;
+    border: none;
+    border-radius: 4px;
+}
+
+.buttonLogin:hover, .buttonLogin:active {
+    background-color: #4cb0f9;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    overflow: visible;
+    background: url(../images/checkbox.svg) left top no-repeat;
+}
+
+input[type="checkbox"]:checked + label span {
+    background: url(../images/checked.svg) left top no-repeat;
+}
+
+.options label {
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    color: #606060;
+}
+
+#autoLogin, #re_pass {
+    font-size: 12px;
+}
+
+.no_select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.logo {
+    position: fixed;
+    top: 64px;
+    left: 169px;
+    border-radius: 50%;
+    height: 92px;
+    width: 92px;
+}
+
+.link {
+    line-height: 32px;
+    height: 32px;
+    display: block;
+}
+
