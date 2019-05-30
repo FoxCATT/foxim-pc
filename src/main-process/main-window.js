@@ -30,7 +30,7 @@ module.exports = class MainWindow extends EventEmitter {
         this.handleEvents();
         this.ipcHandle();
         global.mainWeb = this.browserWindow.webContents;
-        this.openDevTools();
+        // this.openDevTools();
     }
 
     handleEvents() {

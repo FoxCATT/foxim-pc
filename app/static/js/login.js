@@ -10,14 +10,15 @@ document.getElementById('close_bt').addEventListener('click', () => {
 
 ipc.on('reLogin', (event, recode) => {
     console.log("dsdsd");
-    switch (recode) {
-        case 0:
-            console.log("login.success");
-            ipc.send("add");
-            break;
-        default:
-            console.log("login error");
-    }
+    ipc.send("add");
+    // switch (recode) {
+    //     case 0:
+    //         console.log("login.success");
+    //         ipc.send("add");
+    //         break;
+    //     default:
+    //         console.log("login error");
+    // }
 });
 
 const add = document.getElementsByClassName("buttonLogin")[0];

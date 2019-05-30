@@ -36,6 +36,8 @@ module.exports = class MainWindow extends EventEmitter {
         }));
         this.handleEvents();
         this.ipcHandle();
+        this.chlidWindow = new mainWindow();
+        this.chlidWindow.createWindow();
         global.loginWeb = this.browserWindow.webContents;
 
     }
